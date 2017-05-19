@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="BlackRice">
-    <title>分类: Linux - BlackRice</title>
+    <title>标签: 读书笔记 随笔 - BlackRice</title>
     <meta name="author" content="Cherry">
     
     
@@ -14,7 +14,7 @@
     <meta name="description" content="人生不是一场物质的盛宴，而是一次灵魂的修炼，使它在谢幕之时比开幕之初要高尚一点。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="BlackRice">
-<meta property="og:url" content="http://yoursite.com/categories/Linux/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/读书笔记-随笔/index.html">
 <meta property="og:site_name" content="BlackRice">
 <meta property="og:description" content="人生不是一场物质的盛宴，而是一次灵魂的修炼，使它在谢幕之时比开幕之初要高尚一点。">
 <meta name="twitter:card" content="summary">
@@ -202,58 +202,33 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2017/05/19/认识markdown/">
-                            linux如何搜索一个文件夹下包含某个字段的文件
+                        <a class="link-unstyled" href="/2017/05/19/城南旧事201705199/">
+                            城南旧事
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-19T11:28:39+08:00">
+    <time itemprop="datePublished" datetime="2017-05-19T17:27:44+08:00">
 	
 		    5月 19, 2017
     	
     </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/Linux/">Linux</a>
-
-
     
 </div>
 
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <p>find   yourdir   -type   f   -name   “* ”   |   xargs   grep   yourstring</p>
-<p>find ./ -type f -name “*” | xargs grep org.myz</p>
-<p>反思小应用，因为每个发行版本记录历史命令的文件有可能不一样，我们可以用这个命令找出对应记录历史命令的文件。先随便敲一条命令，再搜索一下你刚刚敲的那条命令 find / -type f -name “<em>” | xargs grep “V 2.0” （我这里刚刚敲的命令是V 2.0），返回的是/.ash_history:find /sd3 -type f -name “</em>” | xargs grep V 2.0 这样就能找出对应记录历史命令的文件。大家可以举一反三的噢 。</p>
-<p>以上命令中用到xargs命令，我们来复习一下xargs命令吧</p>
-<p>xargs是给命令传递参数的一个过滤器，也是组合多个命令的一个工具。它把一个数据流分割为一些足够小的块，以方便过滤器和命令进行处理。通常情况下，xargs从管道或者stdin中读取数据，但是它也能够从文件的输出中读取数据。xargs的默认命令是echo，这意味着通过管道传递给xargs的输入将会包含换行和空白，不过通过xargs的处理，换行和空白将被空格取代。</p>
-<p>xargs 是一个强有力的命令，它能够捕获一个命令的输出，然后传递给另外一个命令，下面是一些如何有效使用xargs 的实用例子。</p>
-<ol>
-<li>当你尝试用rm 删除太多的文件，你可能得到一个错误信息：/bin/rm Argument list too long. 用xargs 去避免这个问题</li>
-</ol>
-<p>find ~ -name ‘*.log’ -print0 | xargs -0 rm -f</p>
-<ol>
-<li>获得/etc/ 下所有*.conf 结尾的文件列表，有几种不同的方法能得到相同的结果，下面的例子仅仅是示范怎么实用xargs ，在这个例子中实用 xargs将find 命令的输出传递给ls -l</li>
-</ol>
-<h1 id="find-etc-name-“-conf”-xargs-ls-–l"><a href="#find-etc-name-“-conf”-xargs-ls-–l" class="headerlink" title="find /etc -name “*.conf” | xargs ls –l"></a>find /etc -name “*.conf” | xargs ls –l</h1><ol>
-<li>假如你有一个文件包含了很多你希望下载的URL, 你能够使用xargs 下载所有链接</li>
-</ol>
-<h1 id="cat-url-list-txt-xargs-wget-–c"><a href="#cat-url-list-txt-xargs-wget-–c" class="headerlink" title="cat url-list.txt | xargs wget –c"></a>cat url-list.txt | xargs wget –c</h1><ol>
-<li>查找所有的jpg 文件，并且压缩它</li>
-</ol>
-<h1 id="find-name-jpg-type-f-print-xargs-tar-cvzf-images-tar-gz"><a href="#find-name-jpg-type-f-print-xargs-tar-cvzf-images-tar-gz" class="headerlink" title="find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz"></a>find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz</h1><ol>
-<li>拷贝所有的图片文件到一个外部的硬盘驱动</li>
-</ol>
-<h1 id="ls-jpg-xargs-n1-i-cp-external-hard-drive-directory"><a href="#ls-jpg-xargs-n1-i-cp-external-hard-drive-directory" class="headerlink" title="ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory"></a>ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory</h1>
+                    <div class="figure left" style="width:300px;"><a class="fancybox" href="http://d1u9biwaxjngwg.cloudfront.net/tag-plugins-showcase/car-15.jpg" title="A beautiful sunrise" data-fancybox-group="travel" target="_blank" rel="external"><img class="fig-img" src="http://d1u9biwaxjngwg.cloudfront.net/tag-plugins-showcase/car-15.jpg" style="width:300px;height:150px;" alt="A beautiful sunrise"></a><span class="caption">A beautiful sunrise</span></div><div style="clear:both;"></div>    
+<p>之前读了林海音的城南旧事，断断续续，现在看来都不咋记得故事梗概了，但是看到故事标题，又不觉了然于胸。有<span class="highlight-text danger">惠安馆</span>
+<span class="highlight-text green">我们看海去</span><span class="highlight-text red">兰姨娘</span><span class="highlight-text blue">驴打滚儿</span><span class="highlight-text cyan">爸爸的花儿落了 我也不再是小孩子</span>，虽然书名看上去很老，但是内容却很年轻，透着一股小孩子的视角。时而也会让自己想起自己小时候的故事，转眼间时光不复，还清晰的记得当时儿时一起玩耍的玩伴，清晰的记得自家的小院子，清晰的记得那条下雨后会变得泥泞的通往学校的大路。不知觉间已然长大，再回首过去依然觉得很美好。书里面最后部分有一句话说的是<span class="highlight-text red">虽然，这些人都随着我的长大没有了影子了。是跟着我失去的童年一起失去了吗？</span>想一想真的是，随着我们童年的失去，曾经的老师，曾经的同学，曾经的朋友，曾经相识的人，就像放老电影一般慢慢的从我们的视线中滑了出去。也许这就是人生把。<span class="highlight-text danger">爸爸的花儿落了，我也不再是小孩子</span>随着我们的父辈老去，我们已然也步入中年，我们也要学着父辈们的样子去处理他们曾经经历过的事情，好比一个故事，需要我们一代接着一代的接下去。</p>
+
                     
                         
                     
                     
                         <p>
-                            <a href="/2017/05/19/认识markdown/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2017/05/19/城南旧事201705199/#post-footer" class="postShorten-excerpt_link link">
                                 评论和共享
                             </a>
                         </p>
@@ -273,7 +248,6 @@
 </div>
 
 </section>
-
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -307,7 +281,7 @@
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>计算机工程师</p>
+                <p>设计者qq:648550697</p>
 
             </div>
         
@@ -362,8 +336,8 @@
                 <div class="media">
                     
                     <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2017/05/16/tranquilpeak/">
-                            <h3 class="media-heading">babypicture</h3>
+                        <a class="link-unstyled" href="http://yoursite.com/2017/05/16/carpicture/">
+                            <h3 class="media-heading">carpicture</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -401,7 +375,45 @@
                     
                     <div class="media-body">
                         <a class="link-unstyled" href="http://yoursite.com/2017/05/19/认识markdown/">
-                            <h3 class="media-heading">linux如何搜索一个文件夹下包含某个字段的文件</h3>
+                            <h3 class="media-heading">Markdown 语法说明</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年5月19日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>NOTE: This is Simplelified Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document. Please refer to Markdown: Syntax.声明：这份文档派生(fork)于繁体中文版，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用 Markdown 语法编写，你可以到这里查看它的源文件。「繁体中文版的原始文件可以查看这里 。」–By @riku / 本项目托管于 GitCafe注： 本项目同时也托管于 Github 上，请通过 fork＋pull request 方式来帮忙改进本项目。Markdown 语法说明 (简体中文版) / (点击查看快速入门)<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/05/19/城南旧事201705199/">
+                            <h3 class="media-heading">城南旧事</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年5月19日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/05/19/钗头凤/">
+                            <h3 class="media-heading">钗头凤·红酥手</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -423,14 +435,14 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 4 篇文章
+                找到 6 篇文章
             </p>
         </div>
     </div>
 </div>
 
         
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+<div id="cover" style="background-image:url('http://oq3rih0nx.bkt.clouddn.com/214568-106.jpg');"></div>
         <!--SCRIPTS-->
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/jquery.fancybox.js"></script>
