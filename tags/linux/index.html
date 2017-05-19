@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="BlackRice">
-    <title>标签: ting - BlackRice</title>
+    <title>标签: linux - BlackRice</title>
     <meta name="author" content="Cherry">
     
     
@@ -14,7 +14,7 @@
     <meta name="description" content="人生不是一场物质的盛宴，而是一次灵魂的修炼，使它在谢幕之时比开幕之初要高尚一点。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="BlackRice">
-<meta property="og:url" content="http://yoursite.com/tags/ting/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/linux/index.html">
 <meta property="og:site_name" content="BlackRice">
 <meta property="og:description" content="人生不是一场物质的盛宴，而是一次灵魂的修炼，使它在谢幕之时比开幕之初要高尚一点。">
 <meta name="twitter:card" content="summary">
@@ -202,21 +202,21 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2017/05/16/对不起蛋蛋/">
-                            随笔
+                        <a class="link-unstyled" href="/2017/05/19/认识markdown/">
+                            linux如何搜索一个文件夹下包含某个字段的文件
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-05-16T23:46:12+08:00">
+    <time itemprop="datePublished" datetime="2017-05-19T11:28:39+08:00">
 	
-		    5月 16, 2017
+		    5月 19, 2017
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/love/">love</a>
+    <a class="category-link" href="/categories/Linux/">Linux</a>
 
 
     
@@ -225,14 +225,35 @@
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <p><img src="http://oq3rih0nx.bkt.clouddn.com/267163-106.jpg" alt="Aaron Swartz"></p>
-
+                    <p>find   yourdir   -type   f   -name   “* ”   |   xargs   grep   yourstring</p>
+<p>find ./ -type f -name “*” | xargs grep org.myz</p>
+<p>反思小应用，因为每个发行版本记录历史命令的文件有可能不一样，我们可以用这个命令找出对应记录历史命令的文件。先随便敲一条命令，再搜索一下你刚刚敲的那条命令 find / -type f -name “<em>” | xargs grep “V 2.0” （我这里刚刚敲的命令是V 2.0），返回的是/.ash_history:find /sd3 -type f -name “</em>” | xargs grep V 2.0 这样就能找出对应记录历史命令的文件。大家可以举一反三的噢 。</p>
+<p>以上命令中用到xargs命令，我们来复习一下xargs命令吧</p>
+<p>xargs是给命令传递参数的一个过滤器，也是组合多个命令的一个工具。它把一个数据流分割为一些足够小的块，以方便过滤器和命令进行处理。通常情况下，xargs从管道或者stdin中读取数据，但是它也能够从文件的输出中读取数据。xargs的默认命令是echo，这意味着通过管道传递给xargs的输入将会包含换行和空白，不过通过xargs的处理，换行和空白将被空格取代。</p>
+<p>xargs 是一个强有力的命令，它能够捕获一个命令的输出，然后传递给另外一个命令，下面是一些如何有效使用xargs 的实用例子。</p>
+<ol>
+<li>当你尝试用rm 删除太多的文件，你可能得到一个错误信息：/bin/rm Argument list too long. 用xargs 去避免这个问题</li>
+</ol>
+<p>find ~ -name ‘*.log’ -print0 | xargs -0 rm -f</p>
+<ol>
+<li>获得/etc/ 下所有*.conf 结尾的文件列表，有几种不同的方法能得到相同的结果，下面的例子仅仅是示范怎么实用xargs ，在这个例子中实用 xargs将find 命令的输出传递给ls -l</li>
+</ol>
+<h1 id="find-etc-name-“-conf”-xargs-ls-–l"><a href="#find-etc-name-“-conf”-xargs-ls-–l" class="headerlink" title="find /etc -name “*.conf” | xargs ls –l"></a>find /etc -name “*.conf” | xargs ls –l</h1><ol>
+<li>假如你有一个文件包含了很多你希望下载的URL, 你能够使用xargs 下载所有链接</li>
+</ol>
+<h1 id="cat-url-list-txt-xargs-wget-–c"><a href="#cat-url-list-txt-xargs-wget-–c" class="headerlink" title="cat url-list.txt | xargs wget –c"></a>cat url-list.txt | xargs wget –c</h1><ol>
+<li>查找所有的jpg 文件，并且压缩它</li>
+</ol>
+<h1 id="find-name-jpg-type-f-print-xargs-tar-cvzf-images-tar-gz"><a href="#find-name-jpg-type-f-print-xargs-tar-cvzf-images-tar-gz" class="headerlink" title="find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz"></a>find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz</h1><ol>
+<li>拷贝所有的图片文件到一个外部的硬盘驱动</li>
+</ol>
+<h1 id="ls-jpg-xargs-n1-i-cp-external-hard-drive-directory"><a href="#ls-jpg-xargs-n1-i-cp-external-hard-drive-directory" class="headerlink" title="ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory"></a>ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory</h1>
                     
                         
                     
                     
                         <p>
-                            <a href="/2017/05/16/对不起蛋蛋/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2017/05/19/认识markdown/#post-footer" class="postShorten-excerpt_link link">
                                 评论和共享
                             </a>
                         </p>
